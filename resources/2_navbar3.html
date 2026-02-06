@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button 1</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background: #000;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            padding: 10px 20px;
+            font-size: 24px;
+            border-radius: 10px;
+            background: #333;
+            border: none;
+            color: aliceblue;
+            position: relative;
+            transition: all .5s ease;
+        }
+        .btn:hover{
+            background: yellow;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+        }
+        :root{
+            --angle:0deg;
+        }
+        .btn::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: translate(-82.5%,-25%);
+            border-radius: 10px;
+            z-index: -1;
+            padding: 4px;
+            transition: all .5s ease;
+            background: repeating-linear-gradient(var(--angle),aqua,blue,yellow,orange,red);
+            /* animation: rotate 3s ease infinite; */
+        }
+        @keyframes rotate {
+            from{
+                rotate: 0deg;
+            }
+            to{
+                rotate:360deg;
+            }
+        }
+        .btn:hover::after{
+            background: yellow;
+        }
+        .btn::before{
+            content: '';
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            transform: translate(-19%,-26%);
+            border-radius: 10px;
+            z-index: -1;
+            padding: 4px;
+            filter: blur(10px);
+            transition: all .5s ease;
+            background: repeating-linear-gradient(110deg,aqua,blue,yellow,orange,red) ;
+        }
+        .btn:hover::before{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Click me</button>
+</body>
+</html>
