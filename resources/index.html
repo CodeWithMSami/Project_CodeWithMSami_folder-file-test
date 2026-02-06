@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Practice</title>
+        <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: #000;
+            position: relative;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .header{
+            display: flex;
+            position: absolute;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+        .header .nav-item{
+            font-size: 34px;
+            text-decoration: none;
+            font-family: monospace;
+            margin-left: 5px;
+            color: aliceblue;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 33%;
+            transition: 0.5s;
+        }
+        .nav-item:hover{
+            color: rgb(0, 183, 255);
+            border-bottom: 3px solid rgb(0, 183, 255);
+        }
+        .nav-item span{
+            position: absolute;
+            height: 2px;
+            border-bottom: 3px solid rgb(0, 183, 255);
+        }
+    </style>
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="#" class="nav-item">Home <span></span></a>
+            <a href="#" class="nav-item">About <span></span></a>
+            <a href="#" class="nav-item">Contact <span></span></a>
+            <a href="#" class="nav-item">Product <span></span></a>
+        </header>
+    </body>
+</html>
