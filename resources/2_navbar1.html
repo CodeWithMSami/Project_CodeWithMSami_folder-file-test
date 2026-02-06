@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Navbar</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #000;
+        }
+        .nav-item{
+            padding: 15px 30px;
+            font-size: 34px;
+            color: aliceblue;
+            text-decoration: none;
+            font-family: monospace;
+            position: relative;
+            transition: color .5s;
+        }
+        .nav-item:hover{
+            color: rgb(0, 195, 255);
+        }
+        .nav-item span{
+            position: absolute;
+            border-bottom: 3px solid rgb(0, 195, 255);
+            height: 100%;
+            width: 0%;
+            top: 0%;
+            left: 50%;
+            border-radius: 50px;
+            transition: all .5s;
+        }
+        .nav-item:hover span{
+            width: 100%;
+            left: 0%;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="" class="nav-item">Home<span></span></a>
+        <a href="" class="nav-item">About<span></span></a>
+        <a href="" class="nav-item">Contact<span></span></a>
+        <a href="" class="nav-item">Services<span></span></a>
+    </header>
+</body>
+</html>
